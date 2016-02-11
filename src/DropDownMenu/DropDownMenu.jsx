@@ -65,6 +65,11 @@ const DropDownMenu = React.createClass({
     labelStyle: React.PropTypes.object,
 
     /**
+     * The style object to use to override underlying list style.
+     */
+    listStyle: React.PropTypes.object,
+
+    /**
      * The maximum height of the `Menu` when it is displayed.
      */
     maxHeight: React.PropTypes.number,
@@ -325,6 +330,7 @@ const DropDownMenu = React.createClass({
       iconStyle,
       labelMember,
       labelStyle,
+      listStyle,
       maxHeight,
       menuItems,
       menuStyle,
@@ -427,6 +433,7 @@ const DropDownMenu = React.createClass({
             desktop={true}
             value={value}
             style={menuStyle}
+            listStyle={listStyle}
           >
             {menuItemElements}
           </Menu>
